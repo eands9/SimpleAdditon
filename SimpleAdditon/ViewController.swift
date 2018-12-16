@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        questionLbl.text = "25"
+        questionLbl.text = "\(String(numA)) + \(String(numB))"
         
         
 
