@@ -10,10 +10,23 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var questionLbl: UILabel!
+    
+    var numA = Int.random(in: 100 ... 1000)
+    var numB = Int.random(in: 100 ... 1000)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        questionLbl.text = "25"
+        
+        
+
     }
+
+    
+    
 
 
 }
