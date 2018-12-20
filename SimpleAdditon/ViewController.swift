@@ -24,24 +24,21 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         nextQuestion()
-        
     }
-
     @IBAction func checkBtn(_ sender: Any) {
         if userEnteredTxt.text == String(correctAnswer) && isShow == false{
-            print("You are so smart!")
+            
             nextQuestion()
         }
         else if isShow == true {
             nextQuestion()
         }
         else {
-            print("Try Again!")
+            
         }
         getAnswer()
         userEnteredTxt.text = ""
     }
-    
     func getAnswer() {
         correctAnswer = numA + numB + numC + numD
     }
@@ -51,13 +48,11 @@ class ViewController: UIViewController {
        numC = Int.random(in: 10 ..< 100)
        numD = Int.random(in: 10 ..< 100)
        questionLbl.text = "\(String(numA)) + \(String(numB)) + \(String(numC)) + \(String(numD))"
-    
     }
     @IBAction func showBtn(_ sender: Any) {
         getAnswer()
         userEnteredTxt.text = String(correctAnswer)
         isShow = true
-        
     }
 }
 
